@@ -94,7 +94,7 @@
     <footer class="bg-white dark:bg-gray-800 shadow">
       <div class="w-full mx-auto max-w-screen-xl p-4 text-center">
         <span class="text-sm text-gray-500 dark:text-gray-400">
-          Ti-ROBOTS © {{ new Date().getFullYear() }} <a href="https://t.me/ti_robots_lab" target="_blank"
+          Ti-SOFT © {{ new Date().getFullYear() }} <a href="https://t.me/ti_robots_lab" target="_blank"
             class="inline-flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 transition-colors duration-200">
             Поддержка в Telegram
           </a>
