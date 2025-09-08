@@ -1,0 +1,18 @@
+[[headers]]
+  # Применяем к пути /zayavka/
+  for = "/zayavka/"
+
+  [headers.values]
+    # Разрешаем запросы с вашего фронтенд-домена
+    Access-Control-Allow-Origin = "https://ti-robots.ru"
+    # Разрешаем методы GET и OPTIONS (для preflight)
+    Access-Control-Allow-Methods = "GET, OPTIONS"
+    # Разрешаем заголовок Accept
+    Access-Control-Allow-Headers = "Accept"
+    # Добавляем Content-Security-Policy
+    Content-Security-Policy = "script-src 'self' 'unsafe-inline' mc.yandex.ru yastatic.net 'nonce-erere34r3fdca3df4f'; img-src https://mc.yandex.ru; child-src blob: https://mc.yandex.ru; frame-src blob: https://mc.yandex.ru; frame-ancestors blob: https://mc.yandex.ru;"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
