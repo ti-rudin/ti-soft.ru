@@ -17,10 +17,35 @@
       </h2>
       
       <div class="grid gap-8">
-        <!-- Product 1 -->
-        <router-link to="/case-binance-tsl" 
+        <!-- Product 0 -->
+        <router-link to="/auto-service-ai"
           class="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 animate-fade-in-up"
-          style="animation-delay: 100ms">
+          style="animation-delay: 50ms">
+          <div class="flex flex-col md:flex-row gap-8">
+            <div class="md:w-1/3 h-48 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center text-gray-400 dark:text-gray-500">
+              <span class="text-5xl">🛠️</span>
+            </div>
+            <div class="md:w-2/3">
+              <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">{{ translations.product0Title[currentLanguage] }}</h3>
+              <p class="text-lg mb-4">{{ translations.product0Desc[currentLanguage] }}</p>
+              <ul class="mb-4 space-y-2">
+                <li v-for="(feature, idx) in translations.product0Features[currentLanguage]" :key="'p0f'+idx"
+                    class="flex items-start">
+                  <svg class="flex-shrink-0 w-5 h-5 mt-0.5 mr-2 text-indigo-600 dark:text-indigo-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414L9 14.414 5.293 10.707a1 1 0 011.414-1.414L9 11.586l6.293-6.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  {{ feature }}
+                </li>
+              </ul>
+              <p class="italic text-indigo-600 dark:text-indigo-400">{{ translations.product0IdealFor[currentLanguage] }}</p>
+            </div>
+          </div>
+        </router-link>
+
+        <!-- Product 1 -->
+        <router-link to="/case-binance-tsl"
+          class="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 animate-fade-in-up"
+          style="animation-delay: 150ms">
           <div class="flex flex-col md:flex-row gap-8">
             <div class="md:w-1/3 h-48 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center text-gray-400 dark:text-gray-500">
               <span class="text-5xl">🤖</span>
@@ -43,9 +68,9 @@
         </router-link>
 
         <!-- Product 2 -->
-        <router-link to="/smart-home" 
+        <router-link to="/smart-home"
           class="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 animate-fade-in-up"
-          style="animation-delay: 200ms">
+          style="animation-delay: 250ms">
           <div class="flex flex-col md:flex-row gap-8">
             <div class="md:w-1/3 h-48 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center text-gray-400 dark:text-gray-500">
               <span class="text-5xl">🏠</span>
@@ -68,9 +93,9 @@
         </router-link>
 
         <!-- Product 3 -->
-        <router-link to="/event-soft" 
+        <router-link to="/event-soft"
           class="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 animate-fade-in-up"
-          style="animation-delay: 300ms">
+          style="animation-delay: 350ms">
           <div class="flex flex-col md:flex-row gap-8">
             <div class="md:w-1/3 h-48 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center text-gray-400 dark:text-gray-500">
               <span class="text-5xl">🎤</span>
@@ -247,6 +272,30 @@ export default {
       productsTitle: {
         ru: 'Наши продукты',
         en: 'Our Products',
+      },
+      product0Title: {
+        ru: 'Автосервис AI',
+        en: 'Auto Service AI',
+      },
+      product0Desc: {
+        ru: 'Интегрированная система управления заказ-нарядами автосервиса с применением ИИ. Включает приложения для клиента, инженера и менеджера.',
+        en: 'Integrated order management system for auto service using AI. Includes apps for client, engineer, and manager.',
+      },
+      product0Features: {
+        ru: [
+          'Интегрированная система управления заказами',
+          'Применение ИИ для оптимизации процессов',
+          'Приложения для клиента, инженера и менеджера',
+        ],
+        en: [
+          'Integrated order management system',
+          'AI application for process optimization',
+          'Apps for client, engineer, and manager',
+        ],
+      },
+      product0IdealFor: {
+        ru: 'Идеально для автосервисов, желающих оптимизировать процессы с помощью ИИ',
+        en: 'Ideal for auto services looking to optimize processes with AI',
       },
       product1Title: {
         ru: 'TSL Bot – Автоматизированная торговля с Trailing Stop Loss',

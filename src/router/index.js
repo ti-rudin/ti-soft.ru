@@ -35,6 +35,11 @@ const routes = [
     component: () => import('../views/CaseBinanceTSL.vue'),
   },
   {
+    path: '/auto-service-ai',
+    name: 'auto-service-ai',
+    component: () => import('../views/AutoServiceAI.vue'),
+  },
+  {
     path: '/about',
     name: 'about',
     component: () => import('../views/About.vue'),
