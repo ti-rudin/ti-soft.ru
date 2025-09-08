@@ -1,9 +1,14 @@
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
 import history from 'connect-history-api-fallback'
 
-export default defineConfig({
+export default defineConfig(({ mode }) => {
+  // Загружаем переменные окружения из папки main-front
+  const env = loadEnv(mode, process.cwd() + '/ti-soft.ru', '')
+  console.log(env);
+
+  return {
   plugins: [vue()],
   resolve: {
     alias: {
@@ -12,9 +17,10 @@ export default defineConfig({
   },
   server: {
     host: true,
-    port: 1001, 
+    port: 4001, 
     cors: false,
     strictPort: true,
+    allowedHosts: env.VITE_ALLOWED_HOSTS ? env.VITE_ALLOWED_HOSTS.split(',') : ['all'],
     headers: {
       'Cross-Origin-Opener-Policy': 'same-origin-allow-popups',
       'Cross-Origin-Embedder-Policy': 'require-corp',
@@ -32,7 +38,8 @@ export default defineConfig({
     ]
   },
   preview: {
-    port: 1001,
+    port: 4001,
+    allowedHosts: env.VITE_ALLOWED_HOSTS ? env.VITE_ALLOWED_HOSTS.split(',') : ['all'],
   },
   base: '/',
   publicDir: 'public',
@@ -43,4 +50,4 @@ export default defineConfig({
       }
     }
   }
-})
+}})
