@@ -29,9 +29,11 @@
               <router-link to="/about" class="flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-semibold">
                 {{ translations.about[currentLanguage] }}
               </router-link>
-              <router-link to="/blog" class="flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-semibold">
+              <!--     
+                       <router-link to="/blog" class="flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-semibold">
                 {{ translations.blog[currentLanguage] }}
               </router-link>
+              -->
               <router-link to="/contacts" class="flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-semibold">
                 {{ translations.contacts[currentLanguage] }}
               </router-link>
@@ -74,9 +76,12 @@
         <router-link @click="closeMobileMenu" to="/about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">
           {{ translations.about[currentLanguage] }}
         </router-link>
+        <!-- 
         <router-link @click="closeMobileMenu" to="/blog" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">
           {{ translations.blog[currentLanguage] }}
         </router-link>
+        -->
+
         <router-link @click="closeMobileMenu" to="/contacts" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">
           {{ translations.contacts[currentLanguage] }}
         </router-link>
