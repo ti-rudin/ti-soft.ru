@@ -1,12 +1,12 @@
 module.exports = {
   apps: [{
-    name: 'ti-soft.ru',
+    name: 'dev.ti-soft.ru',
     cwd: '/home/rudin/ti-soft.ru',
     script: 'npm',
     args: 'run serve',
     env: {
       NODE_ENV: 'production',
-      VITE_ALLOWED_HOSTS: 'ti-soft.ru',
+      VITE_ALLOWED_HOSTS: 'ti-soft.ru, dev.ti-soft.ru, localhost',
       PORT: 4001
     },
     error_file: './logs/err.log',

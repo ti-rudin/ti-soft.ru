@@ -5,7 +5,7 @@ import history from 'connect-history-api-fallback'
 
 export default defineConfig(({ mode }) => {
   // Загружаем переменные окружения из папки main-front
-  const env = loadEnv(mode, process.cwd() + '/ti-soft.ru', '')
+  const env = loadEnv(mode, process.cwd(), '')
   console.log(env);
 
   return {
