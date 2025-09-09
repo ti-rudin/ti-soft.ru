@@ -262,7 +262,7 @@ export default {
   setup() {
     const translations = {
       title: {
-        ru: 'Инновационные ИТ решения для бизнеса и жизни',
+        ru: 'Инновационные ИТ-решения для бизнеса и жизни',
         en: 'Innovative IT Solutions for Business and Life',
       },
       subtitle: {
