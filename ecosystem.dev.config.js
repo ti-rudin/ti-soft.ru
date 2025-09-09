@@ -1,6 +1,6 @@
 module.exports = {
   apps: [{
-    name: 'ti-soft.ru',
+    name: 'dev.ti-soft.ru',
     cwd: '/home/rudin/ti-soft.ru',
     script: 'npm',
     args: 'run serve',
