@@ -60,13 +60,13 @@ if [ "$OLD_HEAD" != "$NEW_HEAD" ]; then
     fi
     
     # Устанавливаем зависимости
-    log "Устанавливаем npm зависимости..."
-    npm install || error_exit "Ошибка при установке зависимостей"
+    #log "Устанавливаем npm зависимости..."
+    #npm install || error_exit "Ошибка при установке зависимостей"
     
     # Проверяем наличие скрипта build
-    if ! npm run | grep -q "build"; then
-        error_exit "Скрипт build не найден в package.json"
-    fi
+    #if ! npm run | grep -q "build"; then
+    #    error_exit "Скрипт build не найден в package.json"
+    #fi
     
     # Выполняем сборку
     log "Выполняем npm run build..."
