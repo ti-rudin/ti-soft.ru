@@ -262,11 +262,11 @@ export default {
   setup() {
     const translations = {
       title: {
-        ru: 'Инновационные ИТ-решения для бизнеса и жизни',
+        ru: 'Инновационные ИТ решения для бизнеса и жизни',
         en: 'Innovative IT Solutions for Business and Life',
       },
       subtitle: {
-        ru: 'Создаём передовое ПО для автоматизации автосервисов, торговли, умного дома и организации мероприятий. Мы создаем технологии, которые делают жизнь проще, а бизнес – эффективнее.',
+        ru: 'Создаём передовое программное обеспечение для автоматизации автосервисов, торговли, умного дома и организации мероприятий. Мы создаем технологии, которые делают жизнь проще, а бизнес – эффективнее.',
         en: 'Develop advanced software for trade automation, smart homes, and event management. We create technologies that make life easier and business more efficient.',
       },
       productsTitle: {
